@@ -1,0 +1,35 @@
+---
+title: "Regime and fait-accompli"
+author: "NCVietHung"
+date: "2022-10-17"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Loading packages
+
+```{r packages, echo=FALSE}
+require(tidyverse)
+require(tabbycat)
+require(stargazer)
+require(jtools)
+require(gtsummary)
+require(multcomp)
+require(ggpubr)
+require(rstatix)
+require(xtable)
+```
+
+## Data loading
+
+```{r data, echo=FALSE}
+data_fa <- read_csv("Land Grabs v1.1.csv")
+data_fa %>% 
+  distinct(confnum,.keep_all=TRUE)
+data_fa
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
